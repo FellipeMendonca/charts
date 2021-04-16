@@ -42,7 +42,18 @@ deployment:
 # e.g. setting pg_user here will override the value normally set when postgresql.enabled
 # is set below. In general, you should not set values here if they are set elsewhere.
 env:
-  database: "off"
+  # Determines which of PostgreSQL or Cassandra this node will use as its datastore. Accepted values are `postgres`, `cassandra`, and `off`.
+  database: "postgres" 
+  # Host of the Postgres server.
+  pg_host: "postgresql.kong-demo.svc.cluster.local"
+  # Port of the Postgres server.
+  pg_port: 5432
+  # Postgres user.
+  pg_user: "postgres"
+  # Postgres user's password.
+  pg_password: "PHRfrFmKUe"
+  # The database name to connect to.
+  pg_database: "kong"
   nginx_worker_processes: "2"
   proxy_access_log: /dev/stdout
   admin_access_log: /dev/stdout
@@ -320,7 +331,7 @@ dblessConfig:
 ingressController:
   enabled: true
   image:
-    repository: kong/kubernetes-ingress-controller
+    repository: kong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller
     tag: "1.1"
   args: []
 
