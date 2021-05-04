@@ -45,13 +45,13 @@ env:
   # Determines which of PostgreSQL or Cassandra this node will use as its datastore. Accepted values are `postgres`, `cassandra`, and `off`.
   database: "postgres" 
   # Host of the Postgres server.
-  pg_host: "postgresql.kong-demo.svc.cluster.local"
+  pg_host: "postgresql.database.svc.cluster.local"
   # Port of the Postgres server.
   pg_port: 5432
   # Postgres user.
   pg_user: "postgres"
   # Postgres user's password.
-  pg_password: "PHRfrFmKUe"
+  pg_password: "A02pDbSYur"
   # The database name to connect to.
   pg_database: "kong"
   nginx_worker_processes: "2"
