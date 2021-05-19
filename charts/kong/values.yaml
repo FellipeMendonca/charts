@@ -51,7 +51,7 @@ env:
   # Postgres user.
   pg_user: "postgres"
   # Postgres user's password.
-  pg_password: "A02pDbSYur"
+  pg_password: "d6up8OGRwP"
   # The database name to connect to.
   pg_database: "kong"
   nginx_worker_processes: "2"
